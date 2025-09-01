@@ -85,7 +85,7 @@ body {
 
 /* Стили для герой-секции */
 .hero {
-  background-image: url("./images/Abdulla.jpg");
+  background-image: url("https://alexey-andreev-93.github.io/ar-boxing/images/Abdulla.jpg");
   background-position-y: -250px;
   background-size: cover;
   background-repeat: no-repeat;
