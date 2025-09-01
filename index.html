@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Школа бокса Абдулы Рамазанова | ARBoxing</title>
@@ -21,7 +21,7 @@
       content="Профессиональное обучение боксу в Новое Девяткино, Ленинградская Область для всех возрастов и уровней подготовки."
     />
     <meta property="og:type" content="website" />
-    
+
     <!-- Bulma CSS -->
     <link
       rel="stylesheet"
@@ -39,7 +39,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Навигация -->
@@ -190,16 +190,14 @@
             <figure class="image is-16by9">
               <div
                 style="
-                  background-color: #ddd;
+                  background-color: url('/images/boxing-fight.jpg');
                   height: 100%;
                   display: flex;
                   align-items: center;
                   justify-content: center;
                   border-radius: 10px;
                 "
-              >
-                <span>Изображение зала для бокса</span>
-              </div>
+              ></div>
             </figure>
           </div>
         </div>
@@ -221,16 +219,17 @@
               <div class="trainer-image">
                 <div
                   style="
-                    background-color: #eee;
+                    background-image: url('/images/trainer.jpg');
+                    background-size: cover;
+                    background-position: 0 -100px;
+                    background-repeat: no-repeat;
                     height: 100%;
                     width: 100%;
                     display: flex;
                     align-items: center;
                     justify-content: center;
                   "
-                >
-                  <span>Абдула Рамазанов</span>
-                </div>
+                ></div>
               </div>
               <div class="trainer-content">
                 <div class="media">
@@ -455,20 +454,24 @@
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">ГАЛЕРЕЯ</h2>
 
-        <div class="gallery-slider swiper" data-aos="fade-up" data-aos-delay="200">
+        <div
+          class="gallery-slider swiper"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div class="swiper-wrapper">
             <div class="swiper-slide gallery-slide">
               <div
                 style="
-                  background-color: #ddd;
+                  background-image: url(/images/boxing-fight.jpg);
                   height: 100%;
+                  background-size: cover;
+                  background-position: 0 -700px;
                   display: flex;
                   align-items: center;
                   justify-content: center;
                 "
-              >
-                <span>Тренировочный процесс</span>
-              </div>
+              ></div>
               <div class="gallery-overlay">
                 <p class="title is-5">Тренировочный процесс</p>
                 <p>Интенсивные занятия под руководством тренера</p>
@@ -477,8 +480,10 @@
             <div class="swiper-slide gallery-slide">
               <div
                 style="
-                  background-color: #eee;
+                  background-image: url(/images/boxing-photo.jpg);
                   height: 100%;
+                  background-size: cover;
+                  background-position: center;
                   display: flex;
                   align-items: center;
                   justify-content: center;
@@ -494,7 +499,9 @@
             <div class="swiper-slide gallery-slide">
               <div
                 style="
-                  background-color: #e5e5e5;
+                  background-image: url('/images/boxing-photo-2.jpg');
+                  background-size: cover;
+                  background-position: center;
                   height: 100%;
                   display: flex;
                   align-items: center;
@@ -511,25 +518,27 @@
             <div class="swiper-slide gallery-slide">
               <div
                 style="
-                  background-color: #d5d5d5;
+                  background-image: url('/images/boxing-photo-3.jpg');
+                  background-size: 500px;
+                  background-position: center;
                   height: 100%;
                   display: flex;
                   align-items: center;
                   justify-content: center;
                 "
               >
-                <span>Индивидуальные тренировки</span>
+                <span>Зал школы</span>
               </div>
               <div class="gallery-overlay">
-                <p class="title is-5">Индивидуальные тренировки</p>
-                <p>Персональный подход к каждому ученику</p>
+                <p class="title is-5">Зал школы</p>
+                <p>Современное оборудование и пространство</p>
               </div>
             </div>
           </div>
-          
+
           <!-- Пагинация -->
           <div class="swiper-pagination"></div>
-          
+
           <!-- Навигационные кнопки -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
@@ -947,7 +956,12 @@
               </div>
 
               <div class="map-container">
-               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A2b323371c140b26ec15cde185856caddca86a420f07a5c882f895085751513f3&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+                <iframe
+                  src="https://yandex.ru/map-widget/v1/?um=constructor%3A2b323371c140b26ec15cde185856caddca86a420f07a5c882f895085751513f3&amp;source=constructor"
+                  width="100%"
+                  height="400"
+                  frameborder="0"
+                ></iframe>
               </div>
             </div>
           </div>
@@ -960,7 +974,7 @@
               <script src="https://forms.yandex.ru/_static/embed.js"></script>
               <iframe
                 src="https://forms.yandex.ru/cloud/68b33652f47e731da927d30c?iframe=1"
-                style="border: none;"
+                style="border: none"
                 name="ya-form-68b33652f47e731da927d30c"
                 width="100%"
                 height="500"

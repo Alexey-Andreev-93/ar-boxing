@@ -74,7 +74,10 @@
 
       /* Стили для герой-секции */
       .hero {
-        /* background: linear-gradient(rgba(0, 0, 0, .98), rgba(0, 0, 0, 0.2)); */
+        background-image: url('./images/Abdulla.jpg');
+        background-position-y:-250px;
+        background-size: cover;
+        background-repeat: no-repeat;
         color: var(--primary-white);
         position: relative;
         overflow: hidden;
