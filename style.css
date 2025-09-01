@@ -505,7 +505,7 @@
 
       @media screen and (max-width: 480px) {
         .hero {
-          background-position-y: 0;
+          background-position-y: 0px ;
         }
 
         .hero-title {
