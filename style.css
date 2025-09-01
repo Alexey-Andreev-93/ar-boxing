@@ -1,534 +1,557 @@
-      /* Глобальные стили и переменные */
-      :root {
-        --primary-black: #0a0a0a;
-        --primary-red: #e20a0a;
-        --primary-white: #ffffff;
-        --light-gray: #f5f5f5;
-        --dark-gray: #242424;
-        --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-      }
-
-      /* Устанавливаем стандартные системные шрифты */
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-        overflow-x: hidden;
-        color: var(--dark-gray);
-        padding-top: 70px;
-      }
-
-      /* Анимация стрелки */
-      @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-        40% {transform: translateY(-10px);}
-        60% {transform: translateY(-5px);}
-      }
-
-      .bounce-arrow {
-        animation: bounce 2s infinite;
-      }
-
-      /* Стили для навигации */
-      .navbar {
-        background-color: var(--primary-black) !important;
-        padding: 0.5rem 1.5rem;
-        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
-        transition: var(--transition);
-      }
-
-      .navbar-brand,
-      .navbar-menu {
-        background-color: transparent !important;
-      }
-
-      .navbar-item {
-        color: var(--primary-white) !important;
-        font-weight: 600;
-        position: relative;
-        background-color: transparent !important;
-      }
-
-      .navbar-item:hover {
-        color: var(--primary-red) !important;
-        background-color: transparent !important;
-      }
-
-      .navbar-item:after {
-        content: "";
-        position: absolute;
-        bottom: 5px;
-        left: 50%;
-        width: 0;
-        height: 2px;
-        background: var(--primary-red);
-        transition: var(--transition);
-        transform: translateX(-50%);
-      }
-
-      .navbar-item:hover:after {
-        width: 80%;
-      }
-
-      .navbar-burger {
-        color: var(--primary-white);
-      }
-
-      /* Стили для герой-секции */
-      .hero {
-        background-image: url('./images/Abdulla.jpg');
-        background-position-y:-250px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        color: var(--primary-white);
-        position: relative;
-        overflow: hidden;
-        min-height: 95vh;
-      }
-
-      .hero-title {
-        font-size: 3rem;
-        font-weight: 900;
-        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-        letter-spacing: 1px;
-        padding-top: 10rem;
-        margin-bottom: 1.5rem;
-        text-align: center;
-      }
-
-      .hero-title span {
-        font-size: 4rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.8rem;
-        margin-bottom: 2.5rem;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        text-align: center;
-      }
-
-      .button.is-danger {
-        background-color: var(--primary-red);
-        font-weight: bold;
-        border: none;
-        padding: 1.5rem 2.5rem;
-        font-size: 1.2rem;
-        border-radius: 50px;
-        box-shadow: 0 10px 20px rgba(226, 10, 10, 0.25);
-        transition: var(--transition);
-      }
-
-      .button.is-danger:hover {
-        background-color: #c50909;
-        transform: translateY(-5px);
-        box-shadow: 0 15px 25px rgba(226, 10, 10, 0.35);
-      }
-
-      /* Стили для секций */
-      .section {
-        padding: 6rem 1.5rem;
-      }
-
-      .section-title {
-        font-size: 2.8rem;
-        font-weight: 800;
-        margin-bottom: 3rem;
-        color: var(--primary-black);
-        text-align: center;
-        position: relative;
-        width: 100%;
-      }
-
-      .section-title:after {
-        content: "";
-        display: block;
-        width: 100px;
-        height: 5px;
-        background: var(--primary-red);
-        margin: 15px auto;
-        border-radius: 2px;
-      }
-
-      /* Центрирование всех заголовков */
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        text-align: center;
-      }
-
-      /* Стили для секции "О школе" */
-      .about {
-        background-color: var(--primary-white);
-      }
-
-      /* Стили для секции тренера */
-      .trainer {
-        background: linear-gradient(to bottom, var(--light-gray), var(--primary-white));
-      }
-
-      .trainer-card {
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        transition: var(--transition);
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        background: var(--primary-white);
-        margin: 0 auto;
-        max-width: 800px;
-      }
-
-      .trainer-card:hover {
-        transform: translateY(-15px);
-        box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
-      }
-
-      .trainer-image {
-        height: 400px;
-        background-color: #ddd;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .trainer-image:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
-        z-index: 1;
-      }
-
-      .trainer-content {
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        padding: 2.5rem;
-      }
-
-      .achievements {
-        margin-top: 1.5rem;
-      }
-
-      .achievement-item {
-        display: flex;
-        align-items: center;
-        margin-bottom: 0.8rem;
-      }
-
-      .achievement-icon {
-        margin-right: 10px;
-        font-size: 1.2rem;
-      }
-
-      /* Стили для секции преимуществ */
-      .advantages {
-        background-color: var(--primary-black);
-        color: var(--primary-white);
-      }
-
-      .advantage-box {
-        text-align: center;
-        padding: 3rem 2rem;
-        border-radius: 15px;
-        background: rgba(255, 255, 255, 0.05);
-        height: 100%;
-        transition: var(--transition);
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .advantage-box:hover {
-        transform: translateY(-10px);
-        background: rgba(226, 10, 10, 0.1);
-        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-      }
-
-      .advantage-icon {
-        font-size: 3.5rem;
-        margin-bottom: 1.5rem;
-      }
-
-      /* Стили для Swiper слайдера */
-      .gallery-slider {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        height: 400px;
-        border-radius: 10px;
-      }
-
-      .gallery-slide {
-        height: 100%;
-        position: relative;
-      }
-
-      .gallery-overlay {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-        padding: 2rem;
-        color: var(--primary-white);
-        opacity: 0;
-        transition: var(--transition);
-      }
-
-      .gallery-slide:hover .gallery-overlay {
-        opacity: 1;
-      }
-
-      .swiper-pagination-bullet {
-        background: #ccc;
-        opacity: 1;
-        width: 10px;
-        height: 10px;
-        transition: var(--transition);
-      }
-
-      .swiper-pagination-bullet-active {
-        background: var(--primary-red);
-        transform: scale(1.2);
-      }
-
-      .swiper-button-next, 
-      .swiper-button-prev {
-        color: var(--primary-white);
-        background: var(--primary-red);
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        transition: var(--transition);
-      }
-
-      .swiper-button-next:after, 
-      .swiper-button-prev:after {
-        font-size: 1.2rem;
-      }
-
-      .swiper-button-next:hover, 
-      .swiper-button-prev:hover {
-        background: #c50909;
-        transform: scale(1.1);
-      }
-
-      /* Стили для секции отзывов */
-      .reviews {
-        background: linear-gradient(to right, var(--primary-black), var(--dark-gray));
-        color: var(--primary-white);
-      }
-
-      .review-card {
-        background: rgba(255, 255, 255, 0.05);
-        padding: 2.5rem;
-        border-radius: 15px;
-        height: 100%;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: var(--transition);
-      }
-
-      .review-card:hover {
-        transform: translateY(-10px);
-        background: rgba(226, 10, 10, 0.1);
-      }
-
-      .review-header {
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.5rem;
-      }
-
-      .review-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        background-color: #ddd;
-        margin-right: 1rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        font-weight: bold;
-        font-size: 1.5rem;
-      }
-
-      .review-rating {
-        margin-top: 0.5rem;
-      }
-
-      /* Стили для секции контактов */
-      .contacts {
-        background-color: var(--primary-white);
-      }
-
-      .contact-info {
-        margin-bottom: 1.5rem;
-        display: flex;
-        align-items: center;
-      }
-
-      .contact-icon {
-        margin-right: 15px;
-        font-size: 1.5rem;
-        min-width: 30px;
-        text-align: center;
-      }
-
-      .map-container {
-        height: 400px;
-        background-color: #eee;
-        border-radius: 10px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 2rem;
-      }
-
-      /* Стили для формы обратной связи */
-      .form-box {
-        background: var(--primary-white);
-        padding: 3rem;
-        border-radius: 15px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        color: var(--dark-gray);
-      }
-
-      .input,
-      .textarea {
-        border: 2px solid #eee;
-        border-radius: 8px;
-        padding: 1.2rem;
-        transition: var(--transition);
-      }
-
-      .input:focus,
-      .textarea:focus {
-        border-color: var(--primary-red);
-        box-shadow: 0 0 0 0.125em rgba(226, 10, 10, 0.25);
-      }
-
-      /* Стили для футера */
-      .footer {
-        background-color: var(--primary-black);
-        color: var(--primary-white);
-        padding: 3rem 1.5rem;
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-      }
-
-      .social-icons a {
-        color: var(--primary-white);
-        transition: var(--transition);
-      }
-
-      .social-icons a:hover {
-        color: var(--primary-red);
-        transform: translateY(-5px);
-      }
-
-      /* Анимации и утилиты */
-      .divider {
-        height: 3px;
-        width: 60px;
-        background: var(--primary-red);
-        margin: 1.5rem 0;
-        border-radius: 2px;
-      }
-
-      .mb-2 {
-        margin-bottom: 2rem;
-      }
-
-      /* Адаптивность */
-      @media screen and (max-width: 1023px) {
-        .navbar-menu {
-          background-color: var(--primary-black) !important;
-          padding: 1rem;
-          border-radius: 0 0 10px 10px;
-        }
-
-        .navbar-item:hover:after {
-          width: 30%;
-        }
-        
-        .advantage-box,
-        .review-card {
-          margin-bottom: 1.5rem;
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        .hero-title {
-          font-size: 2.8rem;
-        }
-
-        .hero-subtitle {
-          font-size: 1.4rem;
-        }
-
-        .section-title {
-          font-size: 2.2rem;
-        }
-
-        .button.is-danger {
-          padding: 1.2rem 2rem;
-          font-size: 1.1rem;
-        }
-
-        .trainer-image {
-          height: 300px;
-        }
-
-        body {
-          padding-top: 60px;
-        }
-        
-        .columns.is-multiline .column.is-one-third,
-        .columns.is-multiline .column.is-one-quarter {
-          width: 100%;
-        }
-      }
-
-      @media screen and (max-width: 480px) {
-        .hero {
-          background-position-y: 0px ;
-        }
-
-        .hero-title {
-          font-size: 2.2rem;
-        }
-        
-        .hero-title span {
-          font-size: 3rem;
-        }
-        
-        .section {
-          padding: 4rem 1rem;
-        }
-        .yandex__button {
-          width: 100%;
-        }
-        
-        .form-box {
-          padding: 1.5rem;
-        }
-        
-        .swiper-button-next, 
-        .swiper-button-prev {
-          display: none;
-        }
-      }
+/* Глобальные стили и переменные */
+:root {
+  --primary-black: #0a0a0a;
+  --primary-red: #e20a0a;
+  --primary-white: #ffffff;
+  --light-gray: #f5f5f5;
+  --dark-gray: #242424;
+  --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Устанавливаем стандартные системные шрифты */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  color: var(--dark-gray);
+  padding-top: 70px;
+}
+
+/* Анимация стрелки */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.bounce-arrow {
+  animation: bounce 2s infinite;
+}
+
+/* Стили для навигации */
+.navbar {
+  background-color: var(--primary-black) !important;
+  padding: 0.5rem 1.5rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+}
+
+.navbar-brand,
+.navbar-menu {
+  background-color: transparent !important;
+}
+
+.navbar-item {
+  color: var(--primary-white) !important;
+  font-weight: 600;
+  position: relative;
+  background-color: transparent !important;
+}
+
+.navbar-item:hover {
+  color: var(--primary-red) !important;
+  background-color: transparent !important;
+}
+
+.navbar-item:after {
+  content: "";
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary-red);
+  transition: var(--transition);
+  transform: translateX(-50%);
+}
+
+.navbar-item:hover:after {
+  width: 80%;
+}
+
+.navbar-burger {
+  color: var(--primary-white);
+}
+
+/* Стили для герой-секции */
+.hero {
+  background-image: url("./images/Abdulla.jpg");
+  background-position-y: -250px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: var(--primary-white);
+  position: relative;
+  overflow: hidden;
+  min-height: 95vh;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 900;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  padding-top: 10rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.hero-title span {
+  font-size: 4rem;
+}
+
+.hero-subtitle {
+  font-size: 1.8rem;
+  margin-bottom: 2.5rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.button.is-danger {
+  background-color: var(--primary-red);
+  font-weight: bold;
+  border: none;
+  padding: 1.5rem 2.5rem;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  box-shadow: 0 10px 20px rgba(226, 10, 10, 0.25);
+  transition: var(--transition);
+}
+
+.button.is-danger:hover {
+  background-color: #c50909;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(226, 10, 10, 0.35);
+}
+
+/* Стили для секций */
+.section {
+  padding: 6rem 1.5rem;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  color: var(--primary-black);
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
+.section-title:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background: var(--primary-red);
+  margin: 15px auto;
+  border-radius: 2px;
+}
+
+/* Центрирование всех заголовков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+}
+
+/* Стили для секции "О школе" */
+.about {
+  background-color: var(--primary-white);
+}
+
+/* Стили для секции тренера */
+.trainer {
+  background: linear-gradient(
+    to bottom,
+    var(--light-gray),
+    var(--primary-white)
+  );
+}
+
+.trainer-card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--primary-white);
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.trainer-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
+}
+
+.trainer-image {
+  height: 400px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.trainer-image:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+.trainer-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+}
+
+.achievements {
+  margin-top: 1.5rem;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+
+.achievement-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Стили для секции преимуществ */
+.advantages {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+}
+
+.advantage-box {
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  height: 100%;
+  transition: var(--transition);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.advantage-box:hover {
+  transform: translateY(-10px);
+  background: rgba(226, 10, 10, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.advantage-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Стили для Swiper слайдера */
+.gallery-slider {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+.gallery-slide {
+  height: 100%;
+  position: relative;
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  padding: 2rem;
+  color: var(--primary-white);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.gallery-slide:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.swiper-pagination-bullet {
+  background: #ccc;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  transition: var(--transition);
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--primary-red);
+  transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-white);
+  background: var(--primary-red);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 1.2rem;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: #c50909;
+  transform: scale(1.1);
+}
+
+/* Стили для секции отзывов */
+.reviews {
+  background: linear-gradient(to right, var(--primary-black), var(--dark-gray));
+  color: var(--primary-white);
+}
+
+.review-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2.5rem;
+  border-radius: 15px;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: var(--transition);
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  background: rgba(226, 10, 10, 0.1);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.review-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.review-rating {
+  margin-top: 0.5rem;
+}
+
+/* Стили для секции контактов */
+.contacts {
+  background-color: var(--primary-white);
+}
+
+.contact-info {
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  min-width: 30px;
+  text-align: center;
+}
+
+.map-container {
+  height: 400px;
+  background-color: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Стили для формы обратной связи */
+.form-box {
+  background: var(--primary-white);
+  padding: 3rem;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  color: var(--dark-gray);
+}
+
+.input,
+.textarea {
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 1.2rem;
+  transition: var(--transition);
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: var(--primary-red);
+  box-shadow: 0 0 0 0.125em rgba(226, 10, 10, 0.25);
+}
+
+/* Стили для футера */
+.footer {
+  background-color: var(--primary-black);
+  color: var(--primary-white);
+  padding: 3rem 1.5rem;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-icons a {
+  color: var(--primary-white);
+  transition: var(--transition);
+}
+
+.social-icons a:hover {
+  color: var(--primary-red);
+  transform: translateY(-5px);
+}
+
+/* Анимации и утилиты */
+.divider {
+  height: 3px;
+  width: 60px;
+  background: var(--primary-red);
+  margin: 1.5rem 0;
+  border-radius: 2px;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 1023px) {
+  .navbar-menu {
+    background-color: var(--primary-black) !important;
+    padding: 1rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .navbar-item:hover:after {
+    width: 30%;
+  }
+
+  .advantage-box,
+  .review-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position-y: 0px;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .button.is-danger {
+    padding: 1.2rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .trainer-image {
+    height: 300px;
+  }
+
+  body {
+    padding-top: 60px;
+  }
+
+  .columns.is-multiline .column.is-one-third,
+  .columns.is-multiline .column.is-one-quarter {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero {
+    background-position-y: 0px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .hero-title span {
+    font-size: 3rem;
+  }
+
+  .section {
+    padding: 4rem 1rem;
+  }
+  .yandex__button {
+    width: 100%;
+  }
+
+  .form-box {
+    padding: 1.5rem;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+}
