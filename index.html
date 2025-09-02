@@ -217,19 +217,7 @@
               data-aos-duration="1000"
             >
               <div class="trainer-image">
-                <div
-                  style="
-                    background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/trainer.jpg');
-                    background-size: cover;
-                    background-position: 0 -100px;
-                    background-repeat: no-repeat;
-                    height: 100%;
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                  "
-                ></div>
+                <div class="trainer-bg-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/trainer.jpg')"></div>
               </div>
               <div class="trainer-content">
                 <div class="media">
@@ -451,101 +439,57 @@
 
     <!-- Секция галереи -->
     <section id="gallery" class="section gallery">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">ГАЛЕРЕЯ</h2>
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">ГАЛЕРЕЯ</h2>
 
-        <div
-          class="gallery-slider swiper"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div class="swiper-wrapper">
-            <div class="swiper-slide gallery-slide">
-              <!-- <div
-                style="
-                  background-image: url(/images/boxing-fight.jpg);
-                  height: 100%;
-                  background-size: cover;
-                  background-position: 0 -700px;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              ></div> -->
-              <img src="https://alexey-andreev-93.github.io/ar-boxing/images/boxing-fight.jpg" style="position: absolute; top: -600px;" alt="">
-              <div class="gallery-overlay">
-                <p class="title is-5">Тренировочный процесс</p>
-                <p>Интенсивные занятия под руководством тренера</p>
-              </div>
-            </div>
-            <div class="swiper-slide gallery-slide">
-              <!-- <div
-                style="
-                  background-image: url(/images/boxing-photo.jpg);
-                  height: 100%;
-                  background-size: cover;
-                  background-position: center;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-              </div> -->
-              <img src="https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo.jpg" style="position: absolute; top: -200px;" alt="">
-              <div class="gallery-overlay">
-                <p class="title is-5">Соревнования</p>
-                <p>Наши ученики участвуют в турнирам</p>
-              </div>
-            </div>
-            <div class="swiper-slide gallery-slide">
-              <!-- <div
-                style="
-                  background-image: url('/images/boxing-photo-2.jpg');
-                  background-size: cover;
-                  background-position: center;
-                  height: 100%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-              </div> -->
-              <img src="https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo-2.jpg" style="position: absolute; top: -200px; width: 100%;" alt="">
-              <div class="gallery-overlay">
-                <p class="title is-5">Зал школы</p>
-                <p>Современное оборудование и пространство</p>
-              </div>
-            </div>
-            <div class="swiper-slide gallery-slide">
-              <!-- <div
-                style="
-                  background-image: url('/images/boxing-photo-3.jpg');
-                  background-size: 500px;
-                  background-position: center;
-                  height: 100%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-              </div> -->
-              <img src="https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo-3.jpg" style="position: absolute; width: 100%; height: 100%; " alt="">
-              <div class="gallery-overlay">
-                <p class="title is-5">Зал школы</p>
-                <p>Современное оборудование и пространство</p>
-              </div>
-            </div>
+    <div class="gallery-slider swiper" data-aos="fade-up" data-aos-delay="200">
+      <div class="swiper-wrapper">
+        <!-- Слайд 1 -->
+        <div class="swiper-slide gallery-slide">
+          <div class="gallery-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/boxing-fight.jpg')"></div>
+          <div class="gallery-overlay">
+            <p class="title is-5">Тренировочный процесс</p>
+            <p>Интенсивные занятия под руководством тренера</p>
           </div>
-
-          <!-- Пагинация -->
-          <div class="swiper-pagination"></div>
-
-          <!-- Навигационные кнопки -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+        </div>
+        
+        <!-- Слайд 2 -->
+        <div class="swiper-slide gallery-slide">
+          <div class="gallery-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo.jpg')"></div>
+          <div class="gallery-overlay">
+            <p class="title is-5">Соревнования</p>
+            <p>Наши ученики участвуют в турнирах</p>
+          </div>
+        </div>
+        
+        <!-- Слайд 3 -->
+        <div class="swiper-slide gallery-slide">
+          <div class="gallery-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo-2.jpg')"></div>
+          <div class="gallery-overlay">
+            <p class="title is-5">Зал школы</p>
+            <p>Современное оборудование и пространство</p>
+          </div>
+        </div>
+        
+        <!-- Слайд 4 -->
+        <div class="swiper-slide gallery-slide">
+          <div class="gallery-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo-3.jpg')"></div>
+          <div class="gallery-overlay">
+            <p class="title is-5">Тренировка</p>
+            <p>Профессиональный подход к каждому занятию</p>
+          </div>
         </div>
       </div>
-    </section>
+
+      <!-- Пагинация -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Навигационные кнопки -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+</section>
 
     <!-- Секция отзывов -->
     <section id="reviews" class="section reviews">

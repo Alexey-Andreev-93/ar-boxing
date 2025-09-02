@@ -284,6 +284,17 @@ h6 {
   border-radius: 10px;
 }
 
+.gallery-image {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 .gallery-slide {
   height: 100%;
   position: relative;
@@ -512,8 +523,16 @@ h6 {
     font-size: 1.1rem;
   }
 
-  .trainer-image {
-    height: 300px;
+  .trainer-bg-image {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .gallery-slider {
+    height: 400px;
   }
 
   body {
@@ -542,6 +561,11 @@ h6 {
   .section {
     padding: 4rem 1rem;
   }
+  
+  .gallery-slider {
+    height: 400px;
+  }
+  
   .yandex__button {
     width: 100%;
   }
