@@ -85,7 +85,7 @@ body {
 
 /* Стили для герой-секции */
 .hero {
-  background-image: url("https://alexey-andreev-93.github.io/ar-boxing/images/Abdulla.jpg");
+  background-image: url("./images/Abdulla.jpg");
   background-position-y: -250px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -169,82 +169,126 @@ h6 {
 }
 
 /* Стили для секции "О школе" */
-.about {
-  background-color: var(--primary-white);
+.about .image.is-16by9 {
+  padding: 0;
+  height: auto;
+}
+
+.about-image {
+  background-image: url("./images/boxing-fight.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  border-radius: 10px;
+  min-height: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease; /* Добавляем анимацию */
+}
+
+.about-image:hover {
+  transform: scale(1.02); /* Легкое увеличение при наведении */
 }
 
 /* Стили для секции тренера */
-.trainer {
-  background: linear-gradient(
-    to bottom,
-    var(--light-gray),
-    var(--primary-white)
-  );
-}
-
-.trainer-card {
+.trainer-image-container {
+  position: relative;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-  transition: var(--transition);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
+}
+
+.trainer-main-image {
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.trainer-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
   background: var(--primary-white);
-  margin: 0 auto;
-  max-width: 800px;
-}
-
-.trainer-card:hover {
-  transform: translateY(-15px);
-  box-shadow: 0 30px 50px rgba(0, 0, 0, 0.2);
-}
-
-.trainer-image {
-  height: 400px;
-  background-color: #ddd;
+  padding: 10px 15px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
+  gap: 8px;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.trainer-image:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(0, 0, 0, 0.7) 100%
-  );
-  z-index: 1;
+.achievements-tabs {
+  margin: 2rem 0;
 }
 
-.trainer-content {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 2.5rem;
-}
-
-.achievements {
-  margin-top: 1.5rem;
+.achievement-list {
+  margin-top: 1rem;
 }
 
 .achievement-item {
   display: flex;
   align-items: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--light-gray);
+  border-radius: 8px;
 }
 
-.achievement-icon {
-  margin-right: 10px;
-  font-size: 1.2rem;
+.achievement-year {
+  font-weight: 700;
+  color: var(--primary-red);
+  min-width: 100px;
+}
+
+.achievement-text {
+  flex: 1;
+}
+
+.tab-pane {
+  display: none;
+  padding: 1.5rem;
+  background: var(--light-gray);
+  border-radius: 0 0 8px 8px;
+}
+
+.tab-pane.is-active {
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.trainer-stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: var(--dark-gray);
 }
 
 /* Стили для секции преимуществ */
@@ -273,6 +317,135 @@ h6 {
 .advantage-icon {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
+}
+
+.advantage-title {
+  color: var(--primary-red);
+}
+
+/* Стили для секции цен */
+.pricing {
+  background-color: var(--primary-white);
+}
+
+.pricing-card {
+  background: var(--primary-white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  height: 100%;
+  position: relative;
+  transition: var(--transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(226, 10, 10, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(226, 10, 10, 0.15);
+  border-color: var(--primary-red);
+}
+
+.pricing-card--popular {
+  border: 2px solid var(--primary-red);
+  transform: scale(1.05);
+}
+
+.pricing-card--popular:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  right: 2rem;
+  background: var(--primary-red);
+  color: var(--primary-white);
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.pricing-card__header {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid rgba(226, 10, 10, 0.1);
+}
+
+.pricing-card__price {
+  margin-top: 1rem;
+}
+
+.pricing-card__amount {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--primary-black);
+  display: block;
+}
+
+.pricing-card__duration {
+  font-size: 1rem;
+  color: var(--dark-gray);
+  font-weight: 500;
+}
+
+.pricing-card__savings {
+  color: var(--primary-red);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.pricing-card__features {
+  flex-grow: 1;
+  margin-bottom: 2rem;
+}
+
+.pricing-card__feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  background: rgba(226, 10, 10, 0.05);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.pricing-card__feature:hover {
+  background: rgba(226, 10, 10, 0.1);
+  transform: translateX(5px);
+}
+
+.pricing-card__feature .icon {
+  margin-right: 0.8rem;
+  flex-shrink: 0;
+}
+
+.pricing-card__action {
+  margin-top: auto;
+}
+
+.pricing-card__action .button {
+  border-radius: 50px;
+  padding: 1.2rem 2rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.pricing-card__action .button.is-outlined {
+  border: 2px solid var(--primary-red);
+  color: var(--primary-red);
+}
+
+.pricing-card__action .button.is-outlined:hover {
+  background: var(--primary-red);
+  color: var(--primary-white);
+  transform: translateY(-2px);
 }
 
 /* Стили для Swiper слайдера */
@@ -499,6 +672,19 @@ h6 {
   .review-card {
     margin-bottom: 1.5rem;
   }
+
+  .pricing-card--popular {
+    transform: none;
+    margin: 2rem 0;
+  }
+
+  .pricing-card--popular:hover {
+    transform: translateY(-10px);
+  }
+
+  .columns.is-variable.is-5 {
+    margin: 0 -1rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -523,14 +709,53 @@ h6 {
     font-size: 1.1rem;
   }
 
-  .trainer-bg-image {
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  .about-image {
+    height: 350px;
+    margin-top: 2rem;
   }
-  
+
+  .about .columns.is-vcentered {
+    flex-direction: column;
+  }
+
+  .about .column.is-half:first-child {
+    order: 2;
+  }
+
+  .about .column.is-half:last-child {
+    order: 1;
+  }
+
+  .trainer-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .achievement-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .achievement-year {
+    min-width: auto;
+  }
+
+  .pricing-card {
+    padding: 2rem 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .pricing-card__amount {
+    font-size: 2rem;
+  }
+
+  .pricing-card__badge {
+    right: 1rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.8rem;
+  }
+
   .gallery-slider {
     height: 400px;
   }
@@ -561,11 +786,11 @@ h6 {
   .section {
     padding: 4rem 1rem;
   }
-  
+
   .gallery-slider {
     height: 400px;
   }
-  
+
   .yandex__button {
     width: 100%;
   }

@@ -40,6 +40,22 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    <!-- Schema.org разметка -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SportsActivityLocation",
+        "name": "Школа бокса Абдулы Рамазанова",
+        "description": "Профессиональная школа бокса в Новое Девяткино",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "ул. Славы, д. 1",
+          "addressLocality": "Новое Девяткино",
+          "addressRegion": "Ленинградская область"
+        }
+      }
+    </script>
   </head>
   <body>
     <!-- Навигация -->
@@ -80,6 +96,7 @@
             <a class="navbar-item" href="#about">О школе</a>
             <a class="navbar-item" href="#trainer">Тренер</a>
             <a class="navbar-item" href="#advantages">Преимущества</a>
+            <a class="navbar-item" href="#pricing">Цены</a>
             <a class="navbar-item" href="#gallery">Галерея</a>
             <a class="navbar-item" href="#reviews">Отзывы</a>
             <a class="navbar-item" href="#contacts">Контакты</a>
@@ -188,16 +205,7 @@
           </div>
           <div class="column is-half" data-aos="fade-left" data-aos-delay="400">
             <figure class="image is-16by9">
-              <div
-                style="
-                  background-color: url('/images/boxing-fight.jpg');
-                  height: 100%;
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  border-radius: 10px;
-                "
-              ></div>
+              <div class="about-image"></div>
             </figure>
           </div>
         </div>
@@ -209,109 +217,112 @@
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">ГЛАВНЫЙ ТРЕНЕР</h2>
 
-        <div class="columns is-centered">
-          <div class="column is-two-thirds">
-            <div
-              class="trainer-card"
-              data-aos="flip-up"
-              data-aos-duration="1000"
-            >
-              <div class="trainer-image">
-                <div class="trainer-bg-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/trainer.jpg')"></div>
+        <div class="columns is-vcentered">
+          <div class="column is-5" data-aos="fade-right">
+            <div class="trainer-image-container">
+              <div
+                class="trainer-main-image"
+                style="background-image: url('./images/trainer.jpg')"
+              ></div>
+              <div class="trainer-badge">
+                <span class="icon">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="#e20a0a"
+                  >
+                    <path
+                      d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"
+                    />
+                  </svg>
+                </span>
+                <span>15+ лет опыта</span>
               </div>
-              <div class="trainer-content">
-                <div class="media">
-                  <div class="media-content">
-                    <p class="title is-3">Абдула Рамазанов</p>
-                    <p class="subtitle is-5 has-text-danger">
-                      Основатель и главный тренер
+            </div>
+          </div>
+
+          <div class="column is-7" data-aos="fade-left">
+            <div class="trainer-content">
+              <h3 class="title is-2">Абдула Рамазанов</h3>
+              <p class="subtitle is-4 has-text-danger">
+                Основатель и главный тренер
+              </p>
+
+              <div class="content">
+                <p>
+                  Мастер спорта международного класса по боксу. Многократный
+                  чемпион России и призер международных турниров. Опыт
+                  тренерской работы - более 15 лет.
+                </p>
+              </div>
+
+              <div class="achievements-tabs">
+                <div class="tabs is-boxed">
+                  <ul>
+                    <li class="is-active" data-tab="achievements">
+                      <a>Достижения</a>
+                    </li>
+                    <li data-tab="education"><a>Образование</a></li>
+                    <li data-tab="philosophy"><a>Философия</a></li>
+                  </ul>
+                </div>
+
+                <div class="tab-content">
+                  <div class="tab-pane is-active" id="achievements">
+                    <div class="achievement-list">
+                      <div class="achievement-item">
+                        <span class="achievement-year">2005, 2007, 2009</span>
+                        <span class="achievement-text"
+                          >Чемпион России по боксу</span
+                        >
+                      </div>
+                      <div class="achievement-item">
+                        <span class="achievement-year">2008</span>
+                        <span class="achievement-text"
+                          >Призер международного турнира "Золотые
+                          перчатки"</span
+                        >
+                      </div>
+                      <div class="achievement-item">
+                        <span class="achievement-year">2010</span>
+                        <span class="achievement-text"
+                          >Сертифицированный тренер высшей категории</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane" id="education">
+                    <p>
+                      Высшее образование в области физической культуры и спорта.
+                      Регулярно проходит повышение квалификации и участвует в
+                      тренерских семинарах.
+                    </p>
+                  </div>
+
+                  <div class="tab-pane" id="philosophy">
+                    <p>
+                      "Бокс — это не просто спорт, это искусство самодисциплины
+                      и саморазвития. Моя цель — не только научить технике, но и
+                      помочь каждому ученику раскрыть свой потенциал."
                     </p>
                   </div>
                 </div>
-                <div class="content">
-                  <p>
-                    Мастер спорта международного класса по боксу. Многократный
-                    чемпион России и призер международных турниров. Опыт
-                    тренерской работы - более 15 лет.
-                  </p>
+              </div>
 
-                  <div class="achievements">
-                    <p class="title is-5">Достижения и квалификация:</p>
-                    <div class="achievement-item">
-                      <span class="achievement-icon">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="#e20a0a"
-                          stroke="none"
-                        >
-                          <path
-                            d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"
-                          />
-                        </svg>
-                      </span>
-                      <span>Чемпион России по боксу (2005, 2007, 2009)</span>
-                    </div>
-                    <div class="achievement-item">
-                      <span class="achievement-icon">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="#e20a0a"
-                          stroke="none"
-                        >
-                          <circle cx="12" cy="8" r="7" fill="#e20a0a" />
-                          <path
-                            d="M8 21v-8a4 4 0 0 1 8 0v8"
-                            stroke="#e20a0a"
-                            stroke-width="2"
-                            fill="none"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        >Призер международного турнира "Золотые перчатки"</span
-                      >
-                    </div>
-                    <div class="achievement-item">
-                      <span class="achievement-icon">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="#e20a0a"
-                          stroke="none"
-                        >
-                          <path
-                            d="M12 15l-5 3 1-5.5L4 9l5.5-.5L12 3l2.5 5.5L20 9l-4 3.5 1 5.5z"
-                          />
-                        </svg>
-                      </span>
-                      <span>Сертифицированный тренер высшей категории</span>
-                    </div>
-                    <div class="achievement-item">
-                      <span class="achievement-icon">
-                        <svg
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="#e20a0a"
-                          stroke-width="2"
-                        >
-                          <path
-                            d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                          />
-                        </svg>
-                      </span>
-                      <span
-                        >Высшее образование в области физической культуры и
-                        спорта</span
-                      >
-                    </div>
-                  </div>
+              <div class="trainer-stats">
+                <div class="stat-item">
+                  <div class="stat-number">200+</div>
+                  <div class="stat-label">учеников</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">15+</div>
+                  <div class="stat-label">лет опыта</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-number">25+</div>
+                  <div class="stat-label">побед на турнирах</div>
                 </div>
               </div>
             </div>
@@ -352,7 +363,7 @@
                   />
                 </svg>
               </div>
-              <h3 class="title is-4">Профессионализм</h3>
+              <h3 class="title is-4 advantage-title">Профессионализм</h3>
               <p>Тренер с многолетним опытом и спортивными достижениями</p>
             </div>
           </div>
@@ -379,7 +390,7 @@
                   <path d="M16 3.13a4 4 0 0 1 0 7.75" />
                 </svg>
               </div>
-              <h3 class="title is-4">Индивидуальный подход</h3>
+              <h3 class="title is-4 advantage-title">Индивидуальный подход</h3>
               <p>
                 Программа тренировок адаптируется под ваши цели и возможности
               </p>
@@ -405,7 +416,7 @@
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
                 </svg>
               </div>
-              <h3 class="title is-4">Безопасность</h3>
+              <h3 class="title is-4 advantage-title">Безопасность</h3>
               <p>Все занятия проходят с соблюдением техники безопасности</p>
             </div>
           </div>
@@ -429,7 +440,9 @@
                   <path d="M6 5v14M12 5v14M18 5v14" />
                 </svg>
               </div>
-              <h3 class="title is-4">Современное оборудование</h3>
+              <h3 class="title is-4 advantage-title">
+                Современное оборудование
+              </h3>
               <p>Новый инвентарь и просторный зал для комфортных тренировок</p>
             </div>
           </div>
@@ -437,59 +450,349 @@
       </div>
     </section>
 
-    <!-- Секция галереи -->
-    <section id="gallery" class="section gallery">
-  <div class="container">
-    <h2 class="section-title" data-aos="fade-up">ГАЛЕРЕЯ</h2>
+        <!-- Секция цен -->
+    <section id="pricing" class="section pricing">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">СТОИМОСТЬ ТРЕНИРОВОК</h2>
+        <p
+          class="subtitle has-text-centered mb-6"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Выберите подходящий формат занятий и начните свой путь в мире бокса
+        </p>
 
-    <div class="gallery-slider swiper" data-aos="fade-up" data-aos-delay="200">
-      <div class="swiper-wrapper">
-        <!-- Слайд 1 -->
-        <div class="swiper-slide gallery-slide">
-          <div class="gallery-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/boxing-fight.jpg')"></div>
-          <div class="gallery-overlay">
-            <p class="title is-5">Тренировочный процесс</p>
-            <p>Интенсивные занятия под руководством тренера</p>
+        <div class="columns is-centered is-variable is-5">
+          <!-- Карточка 1: Разовое занятие -->
+          <div
+            class="column is-one-third"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="pricing-card">
+              <div class="pricing-card__header">
+                <h3 class="title is-3">Разовое занятие</h3>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount">1 500 ₽</span>
+                  <span class="pricing-card__duration">/ занятие</span>
+                </div>
+              </div>
+
+              <div class="pricing-card__features">
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Пробное занятие</span>
+                </div>
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>120 минут тренировки</span>
+                </div>
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Все необходимое оборудование</span>
+                </div>
+              </div>
+
+              <div class="pricing-card__action">
+                <a class="button is-outlined is-fullwidth" href="#contacts">
+                  Записаться
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 2: Месячный абонемент (Популярный) -->
+          <div
+            class="column is-one-third"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="pricing-card pricing-card--popular">
+              <div class="pricing-card__badge">ВЫГОДНО</div>
+              <div class="pricing-card__header">
+                <h3 class="title is-3">Месячный абонемент</h3>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount">8 000 ₽</span>
+                  <span class="pricing-card__duration">/ месяц</span>
+                </div>
+                <p class="pricing-card__savings">Экономия 2 000 ₽</p>
+              </div>
+
+              <div class="pricing-card__features">
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>8 занятий в месяц</span>
+                </div>
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Персональная программа</span>
+                </div>
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Прогресс-отслеживание</span>
+                </div>
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Скидка на экипировку 10%</span>
+                </div>
+              </div>
+
+              <div class="pricing-card__action">
+                <a class="button is-danger is-fullwidth" href="#contacts">
+                  Выбрать тариф
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Карточка 3: Индивидуальные тренировки -->
+          <div
+            class="column is-one-third"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="pricing-card">
+              <div class="pricing-card__header">
+                <h3 class="title is-3">Индивидуально</h3>
+                <div class="pricing-card__price">
+                  <span class="pricing-card__amount">2 500 ₽</span>
+                  <span class="pricing-card__duration">/ занятие</span>
+                </div>
+              </div>
+
+              <div class="pricing-card__features">
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Персональный тренер</span>
+                </div>
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Гибкое расписание</span>
+                </div>
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Индивидуальная программа</span>
+                </div>
+                <div class="pricing-card__feature">
+                  <span class="icon has-text-success">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M20 6L9 17l-5-5" />
+                    </svg>
+                  </span>
+                  <span>Максимальный результат</span>
+                </div>
+              </div>
+
+              <div class="pricing-card__action">
+                <a class="button is-outlined is-fullwidth" href="#contacts">
+                  Обсудить детали
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        
-        <!-- Слайд 2 -->
-        <div class="swiper-slide gallery-slide">
-          <div class="gallery-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo.jpg')"></div>
-          <div class="gallery-overlay">
-            <p class="title is-5">Соревнования</p>
-            <p>Наши ученики участвуют в турнирах</p>
-          </div>
-        </div>
-        
-        <!-- Слайд 3 -->
-        <div class="swiper-slide gallery-slide">
-          <div class="gallery-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo-2.jpg')"></div>
-          <div class="gallery-overlay">
-            <p class="title is-5">Зал школы</p>
-            <p>Современное оборудование и пространство</p>
-          </div>
-        </div>
-        
-        <!-- Слайд 4 -->
-        <div class="swiper-slide gallery-slide">
-          <div class="gallery-image" style="background-image: url('https://alexey-andreev-93.github.io/ar-boxing/images/boxing-photo-3.jpg')"></div>
-          <div class="gallery-overlay">
-            <p class="title is-5">Тренировка</p>
-            <p>Профессиональный подход к каждому занятию</p>
-          </div>
+
+        <div
+          class="has-text-centered mt-6"
+          data-aos="fade-up"
+          data-aos-delay="500"
+        >
+          <p class="is-size-5">
+            💪 Первая пробная тренировка — <strong>бесплатно!</strong>
+          </p>
+          <a class="button is-text has-text-danger mt-3" href="#contacts">
+            Записаться на бесплатное занятие
+          </a>
         </div>
       </div>
+    </section>
 
-      <!-- Пагинация -->
-      <div class="swiper-pagination"></div>
+    <!-- Секция галереи -->
+    <section id="gallery" class="section gallery">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">ГАЛЕРЕЯ</h2>
 
-      <!-- Навигационные кнопки -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </div>
-</section>
+        <div
+          class="gallery-slider swiper"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="swiper-wrapper">
+            <!-- Слайд 1 -->
+            <div class="swiper-slide gallery-slide">
+              <div
+                class="gallery-image"
+                style="background-image: url('./images/boxing-fight.jpg')"
+              ></div>
+              <div class="gallery-overlay">
+                <p class="title is-5">Тренировочный процесс</p>
+                <p>Интенсивные занятия под руководством тренера</p>
+              </div>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="swiper-slide gallery-slide">
+              <div
+                class="gallery-image"
+                style="background-image: url('./images/boxing-photo.jpg')"
+              ></div>
+              <div class="gallery-overlay">
+                <p class="title is-5">Соревнования</p>
+                <p>Наши ученики участвуют в турнирах</p>
+              </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="swiper-slide gallery-slide">
+              <div
+                class="gallery-image"
+                style="background-image: url('./images/boxing-photo-2.jpg')"
+              ></div>
+              <div class="gallery-overlay">
+                <p class="title is-5">Зал школы</p>
+                <p>Современное оборудование и пространство</p>
+              </div>
+            </div>
+
+            <!-- Слайд 4 -->
+            <div class="swiper-slide gallery-slide">
+              <div
+                class="gallery-image"
+                style="background-image: url('./images/boxing-photo-3.jpg')"
+              ></div>
+              <div class="gallery-overlay">
+                <p class="title is-5">Тренировка</p>
+                <p>Профессиональный подход к каждому занятию</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Пагинация -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Навигационные кнопки -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
 
     <!-- Секция отзывов -->
     <section id="reviews" class="section reviews">
@@ -814,7 +1117,7 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Секция контактов и формы -->
     <section id="contacts" class="section contacts">
       <div class="container">
@@ -841,7 +1144,9 @@
                     <circle cx="12" cy="10" r="3" />
                   </svg>
                 </span>
-                <span>г. Москва, ул. Спортивная, д. 15</span>
+                <span
+                  >Ленинградская обл., д. Новое Девяткино, ул. Славы, д. 1</span
+                >
               </div>
 
               <div class="contact-info">
@@ -940,7 +1245,7 @@
               <h4 class="title is-4" style="color: var(--primary-white)">
                 <span style="color: var(--primary-red)">AR</span>BOXING
               </h4>
-              <p>Профессиональная школа бокса Абдулы Рамазанова</p>
+              <p>Школа бокса Абдулы Рамазанова</p>
             </div>
           </div>
 
@@ -959,7 +1264,9 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="currentColor"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
                   >
                     <path
                       d="M15.07 2H8.93C3.33 2 2 3.33 2 8.93v6.14C2 20.67 3.33 22 8.93 22h6.14c5.6 0 6.93-1.33 6.93-6.93V8.93C22 3.33 20.67 2 15.07 2m-.7 14.93h-1.43c-.55 0-.72-.42-1.9-1.55-1.1-1.04-1.59-1.17-1.86-1.17-.33 0-.42.1-.42.53v1.43c0 .38-.12.66-1.19.66a5.57 5.57 0 0 1-4.4-2.59c-1.93-3.10-1.93-6.70 0-9.80.24-.38.86-.66 1.19-.66h1.43c.38 0 .55.18.67.61.67 2.46 1.78 5.16 2.49 5.16.24 0 .33-.06.33-.53v-2.40c-.06-.96-.53-1.07-.53-.84-.24.24-.67.72-.91 1.01-.29.36-.86 1.01-1.9 1.01H9.3c-.31 0-.48.24-.48.48 0 .49.77.84 1.01 1.37.53 1.25.86 2.89 1.01 3.78.06.24 0 .43-.24.43-.60 0-1.67-1.78-2.35-2.59-.24-.36-.43-.53-.67-.53-.12 0-.24.06-.24.12 0 .24.43.60.72 1.01 1.37 1.67 2.11 3.11 3.05 3.11h.43c.36 0 .43-.18.43-.53v-1.67c0-.91.18-1.01.30-1.01.18 0 .30.06.48.24.67.84 1.67 2.23 1.67 2.23.18.24.30.36.48.36"
@@ -971,23 +1278,13 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="currentColor"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
                   >
                     <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <path
-                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                      fill="none"
-                      stroke="var(--primary-black)"
-                      stroke-width="1.5"
-                    />
-                    <line
-                      x1="17.5"
-                      y1="6.5"
-                      x2="17.51"
-                      y2="6.5"
-                      stroke="var(--primary-black)"
-                      stroke-width="2"
-                    />
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
                   </svg>
                 </a>
                 <a href="#" aria-label="Telegram">
@@ -995,7 +1292,9 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="currentColor"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
                   >
                     <path
                       d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.78 5.42-.92 6.8-.06.67-.36.89-.84.56-2.13-1.5-4.02-2.84-5.91-4.17-.52-.35-.53-1.07.11-1.38 2.28-1.12 6.73-3.26 7.40-3.58.33-.16.64-.05.78.36.14.41.14 1.07.18 1.41z"
@@ -1007,7 +1306,9 @@
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
-                    fill="currentColor"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
                   >
                     <path
                       d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"
