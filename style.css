@@ -85,7 +85,7 @@ body {
 
 /* Стили для герой-секции */
 .hero {
-  background-image: url("./images/Abdulla.jpg");
+  background-image: url("./images/hero.jpg");
   background-position-y: -250px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -175,7 +175,7 @@ h6 {
 }
 
 .about-image {
-  background-image: url("./images/boxing-fight.jpg");
+  background-image: url("./images/about.jpg");
   background-size: cover;
   background-position: center;
   height: 500px;
