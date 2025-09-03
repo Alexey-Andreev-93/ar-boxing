@@ -724,75 +724,72 @@
       </div>
     </section>
 
-    <!-- Секция галереи -->
-    <section id="gallery" class="section gallery">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-up">ГАЛЕРЕЯ</h2>
+<!-- Секция галереи -->
+<section id="gallery" class="section gallery">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">НАША ГАЛЕРЕЯ</h2>
+    <p class="subtitle has-text-centered mb-6" data-aos="fade-up" data-aos-delay="100">
+      Загляните в мир нашей школы бокса и почувствуйте атмосферу тренировок
+    </p>
 
-        <div
-          class="gallery-slider swiper"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
-          <div class="swiper-wrapper">
-            <!-- Слайд 1 -->
-            <div class="swiper-slide gallery-slide">
-              <div
-                class="gallery-image"
-                style="background-image: url('./images/boxing-fight.jpg')"
-              ></div>
-              <div class="gallery-overlay">
-                <p class="title is-5">Тренировочный процесс</p>
-                <p>Интенсивные занятия под руководством тренера</p>
-              </div>
-            </div>
+    <div class="gallery-filter" data-aos="fade-up" data-aos-delay="200">
+      <button class="filter-button is-active" data-filter="all">Все</button>
+      <button class="filter-button" data-filter="training">Тренировки</button>
+      <button class="filter-button" data-filter="gym">Зал</button>
+      <button class="filter-button" data-filter="competitions">Соревнования</button>
+    </div>
 
-            <!-- Слайд 2 -->
-            <div class="swiper-slide gallery-slide">
-              <div
-                class="gallery-image"
-                style="background-image: url('./images/boxing-photo.jpg')"
-              ></div>
-              <div class="gallery-overlay">
-                <p class="title is-5">Соревнования</p>
-                <p>Наши ученики участвуют в турнирах</p>
-              </div>
-            </div>
-
-            <!-- Слайд 3 -->
-            <div class="swiper-slide gallery-slide">
-              <div
-                class="gallery-image"
-                style="background-image: url('./images/boxing-photo-2.jpg')"
-              ></div>
-              <div class="gallery-overlay">
-                <p class="title is-5">Зал школы</p>
-                <p>Современное оборудование и пространство</p>
-              </div>
-            </div>
-
-            <!-- Слайд 4 -->
-            <div class="swiper-slide gallery-slide">
-              <div
-                class="gallery-image"
-                style="background-image: url('./images/boxing-photo-3.jpg')"
-              ></div>
-              <div class="gallery-overlay">
-                <p class="title is-5">Тренировка</p>
-                <p>Профессиональный подход к каждому занятию</p>
-              </div>
+    <div class="gallery-grid" data-aos="fade-up" data-aos-delay="300">
+      <div class="gallery-item" data-category="training">
+        <div class="gallery-image" style="background-image: url('./images/gallery/training-1.jpg')">
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <h4>Индивидуальные занятия</h4>
+              <p>Персональный подход к каждому ученику</p>
             </div>
           </div>
-
-          <!-- Пагинация -->
-          <div class="swiper-pagination"></div>
-
-          <!-- Навигационные кнопки -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
         </div>
       </div>
-    </section>
+      
+      <div class="gallery-item" data-category="training">
+        <div class="gallery-image" style="background-image: url('./images/gallery/training-2.jpg')">
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <h4>Групповые тренировки</h4>
+              <p>Работа в парах и отработка техники</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="gallery-item" data-category="gym">
+        <div class="gallery-image" style="background-image: url('./images/gallery/gym-1.jpg')">
+          <div class="gallery-overlay">
+            <div class="gallery-content">
+              <h4>Профессиональное оборудование</h4>
+              <p>Новые груши и современный инвентарь</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Добавьте еще 5-6 элементов -->
+    </div>
+
+    <div class="has-text-centered mt-6" data-aos="fade-up" data-aos-delay="400">
+      <a class="button is-danger is-medium" href="https://www.instagram.com/your_profile" target="_blank">
+        <span class="icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+          </svg>
+        </span>
+        <span>Больше фото в Instagram</span>
+      </a>
+    </div>
+  </div>
+</section>
 
     <!-- Секция отзывов -->
     <section id="reviews" class="section reviews">

@@ -29,27 +29,45 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // Инициализация Swiper слайдера
-  const swiper = new Swiper(".gallery-slider", {
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    effect: "slide",
-    speed: 800,
-  });
-
-    const tabs = document.querySelectorAll('.achievements-tabs .tabs li');
+// Исправленная фильтрация галереи
+  const filterButtons = document.querySelectorAll('.filter-button');
+  const galleryItems = document.querySelectorAll('.gallery-item');
   
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Убираем активный класс со всех кнопок
+      filterButtons.forEach(btn => btn.classList.remove('is-active'));
+      
+      // Добавляем активный класс к текущей кнопке
+      this.classList.add('is-active');
+      
+      // Получаем значение фильтра
+      const filterValue = this.getAttribute('data-filter');
+      
+      // Фильтруем элементы галереи
+      galleryItems.forEach(item => {
+        const itemCategory = item.getAttribute('data-category');
+        
+        if (filterValue === 'all' || itemCategory === filterValue) {
+          item.style.display = 'block';
+          // Добавляем анимацию появления
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 50);
+        } else {
+          // Анимация скрытия
+          item.style.opacity = '0';
+          item.style.transform = 'scale(0.9)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 300);
+        }
+      });
+    });
+  });
+  
+  const tabs = document.querySelectorAll('.achievements-tabs .tabs li');
   // Добавляем обработчик клика на вкладки
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
@@ -69,21 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById(tabName).classList.add('is-active');
     });
   });
-});
-
-
-
-
-
-
-// Добавить в script.js для работы вкладок
-
-
-
-
-
-
-
+})
 
 
 // Активация бургер-меню
