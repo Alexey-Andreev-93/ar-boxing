@@ -1,10 +1,22 @@
-// Инициализация AOS
 document.addEventListener("DOMContentLoaded", function () {
+  // Инициализация AOS
   AOS.init({
-    duration: 800,
+    duration: 600,
     easing: "ease-in-out",
     once: true,
     mirror: false,
+  });
+
+  // Инициализация Swiper
+  const swiper = new Swiper(".swiper", {
+    direction: "horizontal",
+    loop: true,
+    speed: 400,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
 
   // Плавная прокрутка для стрелки вниз
@@ -29,69 +41,67 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-// Исправленная фильтрация галереи
-  const filterButtons = document.querySelectorAll('.filter-button');
-  const galleryItems = document.querySelectorAll('.gallery-item');
-  
-  filterButtons.forEach(button => {
-    button.addEventListener('click', function() {
+  // Фильтрация галереи
+  const filterButtons = document.querySelectorAll(".filter-button");
+  const galleryItems = document.querySelectorAll(".gallery-item");
+
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", function () {
       // Убираем активный класс со всех кнопок
-      filterButtons.forEach(btn => btn.classList.remove('is-active'));
-      
+      filterButtons.forEach((btn) => btn.classList.remove("is-active"));
+
       // Добавляем активный класс к текущей кнопке
-      this.classList.add('is-active');
-      
+      this.classList.add("is-active");
+
       // Получаем значение фильтра
-      const filterValue = this.getAttribute('data-filter');
-      
+      const filterValue = this.getAttribute("data-filter");
+
       // Фильтруем элементы галереи
-      galleryItems.forEach(item => {
-        const itemCategory = item.getAttribute('data-category');
-        
-        if (filterValue === 'all' || itemCategory === filterValue) {
-          item.style.display = 'block';
+      galleryItems.forEach((item) => {
+        const itemCategory = item.getAttribute("data-category");
+
+        if (filterValue === "all" || itemCategory === filterValue) {
+          item.style.display = "block";
           // Добавляем анимацию появления
           setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'scale(1)';
+            item.style.opacity = "1";
+            item.style.transform = "scale(1)";
           }, 50);
         } else {
           // Анимация скрытия
-          item.style.opacity = '0';
-          item.style.transform = 'scale(0.9)';
+          item.style.opacity = "0";
+          item.style.transform = "scale(0.9)";
           setTimeout(() => {
-            item.style.display = 'none';
+            item.style.display = "none";
           }, 300);
         }
       });
     });
   });
-  
-  const tabs = document.querySelectorAll('.achievements-tabs .tabs li');
+
+  // Инициализация вкладок
+  const tabs = document.querySelectorAll(".achievements-tabs .tabs li");
   // Добавляем обработчик клика на вкладки
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
       // Убираем активный класс со всех вкладок
-      tabs.forEach(t => t.classList.remove('is-active'));
-      
+      tabs.forEach((t) => t.classList.remove("is-active"));
+
       // Добавляем активный класс к clicked вкладке
-      tab.classList.add('is-active');
-      
+      tab.classList.add("is-active");
+
       // Скрываем все содержимое вкладок
-      document.querySelectorAll('.tab-pane').forEach(pane => {
-        pane.classList.remove('is-active');
+      document.querySelectorAll(".tab-pane").forEach((pane) => {
+        pane.classList.remove("is-active");
       });
-      
+
       // Показываем соответствующее содержимое
-      const tabName = tab.getAttribute('data-tab');
-      document.getElementById(tabName).classList.add('is-active');
+      const tabName = tab.getAttribute("data-tab");
+      document.getElementById(tabName).classList.add("is-active");
     });
   });
-})
 
-
-// Активация бургер-меню
-document.addEventListener("DOMContentLoaded", () => {
+  // Активация бургер-меню
   const $navbarBurgers = Array.prototype.slice.call(
     document.querySelectorAll(".navbar-burger"),
     0

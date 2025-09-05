@@ -94,7 +94,7 @@
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
             <a class="navbar-item" href="#about">О школе</a>
-            <a class="navbar-item" href="#trainer">Тренер</a>
+            <a class="navbar-item" href="#trainer">Тренеры</a>
             <a class="navbar-item" href="#advantages">Преимущества</a>
             <a class="navbar-item" href="#pricing">Цены</a>
             <a class="navbar-item" href="#gallery">Галерея</a>
@@ -212,121 +212,227 @@
       </div>
     </section>
 
-    <!-- Секция тренера -->
+    <!-- Секция тренеры -->
     <section id="trainer" class="section trainer">
       <div class="container">
-        <h2 class="section-title" data-aos="fade-up">ГЛАВНЫЙ ТРЕНЕР</h2>
+        <h2 class="section-title" data-aos="fade-up">ТРЕНЕРЫ</h2>
+        <p
+          class="subtitle has-text-centered mb-6"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          Профессиональные тренеры с многолетним опытом работы
+        </p>
 
-        <div class="columns is-vcentered">
-          <div class="column is-5" data-aos="fade-right">
-            <div class="trainer-image-container">
-              <div
-                class="trainer-main-image"
-                style="background-image: url('./images/trainer.jpg')"
-              ></div>
-              <div class="trainer-badge">
-                <span class="icon">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="#e20a0a"
-                  >
-                    <path
-                      d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"
-                    />
-                  </svg>
-                </span>
-                <span>15+ лет опыта</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="column is-7" data-aos="fade-left">
-            <div class="trainer-content">
-              <h3 class="title is-2">Абдула Рамазанов</h3>
-              <p class="subtitle is-4 has-text-danger">
-                Основатель и главный тренер
-              </p>
-
-              <div class="content">
-                <p>
-                  Мастер спорта международного класса по боксу. Многократный
-                  чемпион России и призер международных турниров. Опыт
-                  тренерской работы - более 15 лет.
-                </p>
-              </div>
-
-              <div class="achievements-tabs">
-                <div class="tabs is-boxed">
-                  <ul>
-                    <li class="is-active" data-tab="achievements">
-                      <a>Достижения</a>
-                    </li>
-                    <li data-tab="education"><a>Образование</a></li>
-                    <li data-tab="philosophy"><a>Философия</a></li>
-                  </ul>
+        <div class="swiper trainer-swiper">
+          <div class="swiper-wrapper">
+            <!-- Тренер 1 -->
+            <div class="swiper-slide">
+              <div class="trainer-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="trainer-card__image">
+                  <div
+                    class="trainer-image"
+                    style="background-image: url('./images/trainer.jpg')"
+                  ></div>
+                  <div class="trainer-card__badge">
+                    <span class="icon">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="#e20a0a"
+                      >
+                        <path
+                          d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"
+                        />
+                      </svg>
+                    </span>
+                    <span>15+ лет опыта</span>
+                  </div>
                 </div>
 
-                <div class="tab-content">
-                  <div class="tab-pane is-active" id="achievements">
-                    <div class="achievement-list">
-                      <div class="achievement-item">
-                        <span class="achievement-year">2005, 2007, 2009</span>
-                        <span class="achievement-text"
-                          >Чемпион России по боксу</span
-                        >
-                      </div>
-                      <div class="achievement-item">
-                        <span class="achievement-year">2008</span>
-                        <span class="achievement-text"
-                          >Призер международного турнира "Золотые
-                          перчатки"</span
-                        >
-                      </div>
-                      <div class="achievement-item">
-                        <span class="achievement-year">2010</span>
-                        <span class="achievement-text"
-                          >Сертифицированный тренер высшей категории</span
-                        >
-                      </div>
+                <div class="trainer-card__content">
+                  <h3 class="trainer-card__name">Абдулла Рамазанов</h3>
+                  <p class="trainer-card__position">
+                    Основатель и главный тренер
+                  </p>
+
+                  <div class="trainer-card__stats">
+                    <div class="trainer-stat">
+                      <span class="stat-number">200+</span>
+                      <span class="stat-label">учеников</span>
+                    </div>
+                    <div class="trainer-stat">
+                      <span class="stat-number">25+</span>
+                      <span class="stat-label">побед</span>
+                    </div>
+                    <div class="trainer-stat">
+                      <span class="stat-number">15+</span>
+                      <span class="stat-label">лет</span>
                     </div>
                   </div>
 
-                  <div class="tab-pane" id="education">
-                    <p>
-                      Высшее образование в области физической культуры и спорта.
-                      Регулярно проходит повышение квалификации и участвует в
-                      тренерских семинарах.
-                    </p>
+                  <div class="trainer-card__achievements">
+                    <h4>Достижения:</h4>
+                    <ul>
+                      <li>Чемпион России (2005, 2007, 2009)</li>
+                      <li>Призер "Золотые перчатки" (2008)</li>
+                      <li>Тренер высшей категории</li>
+                    </ul>
                   </div>
 
-                  <div class="tab-pane" id="philosophy">
-                    <p>
-                      "Бокс — это не просто спорт, это искусство самодисциплины
-                      и саморазвития. Моя цель — не только научить технике, но и
-                      помочь каждому ученику раскрыть свой потенциал."
-                    </p>
+                  <div class="trainer-card__philosophy">
+                    <p>"Бокс — это искусство самодисциплины и саморазвития"</p>
                   </div>
+
+                  <button
+                    class="button is-outlined trainer-modal-btn"
+                    data-trainer="1"
+                  >
+                    Подробнее о тренере
+                  </button>
                 </div>
               </div>
+            </div>
 
-              <div class="trainer-stats">
-                <div class="stat-item">
-                  <div class="stat-number">200+</div>
-                  <div class="stat-label">учеников</div>
+            <!-- Тренер 2 -->
+            <div class="swiper-slide">
+              <div class="trainer-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="trainer-card__image">
+                  <div
+                    class="trainer-image"
+                    style="background-color: #eee"
+                  ></div>
+                  <div class="trainer-card__badge">
+                    <span class="icon">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="#e20a0a"
+                      >
+                        <path
+                          d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"
+                        />
+                      </svg>
+                    </span>
+                    <span>7+ лет опыта</span>
+                  </div>
                 </div>
-                <div class="stat-item">
-                  <div class="stat-number">15+</div>
-                  <div class="stat-label">лет опыта</div>
+
+                <div class="trainer-card__content">
+                  <h3 class="trainer-card__name">Кристина Рамазанова</h3>
+                  <p class="trainer-card__position">Тренер по фитнесу</p>
+
+                  <div class="trainer-card__stats">
+                    <div class="trainer-stat">
+                      <span class="stat-number">150+</span>
+                      <span class="stat-label">учеников</span>
+                    </div>
+                    <div class="trainer-stat">
+                      <span class="stat-number">10+</span>
+                      <span class="stat-label">побед</span>
+                    </div>
+                    <div class="trainer-stat">
+                      <span class="stat-number">7+</span>
+                      <span class="stat-label">лет</span>
+                    </div>
+                  </div>
+
+                  <div class="trainer-card__achievements">
+                    <h4>Достижения:</h4>
+                    <ul>
+                      <li>Мастер спорта по фитнесу</li>
+                      <li>Сертифицированный тренер</li>
+                      <li>Специалист по функциональному тренингу</li>
+                    </ul>
+                  </div>
+
+                  <div class="trainer-card__philosophy">
+                    <p>"Фитнес — это путь к здоровью и уверенности в себе"</p>
+                  </div>
+
+                  <button
+                    class="button is-outlined trainer-modal-btn"
+                    data-trainer="2"
+                  >
+                    Подробнее о тренере
+                  </button>
                 </div>
-                <div class="stat-item">
-                  <div class="stat-number">25+</div>
-                  <div class="stat-label">побед на турнирах</div>
+              </div>
+            </div>
+
+            <!-- Тренер 3 -->
+            <div class="swiper-slide">
+              <div class="trainer-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="trainer-card__image">
+                  <div
+                    class="trainer-image"
+                    style="background-color: #ddd"
+                  ></div>
+                  <div class="trainer-card__badge">
+                    <span class="icon">
+                      <svg
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                        fill="#e20a0a"
+                      >
+                        <path
+                          d="M12 2L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2z"
+                        />
+                      </svg>
+                    </span>
+                    <span>10+ лет опыта</span>
+                  </div>
+                </div>
+
+                <div class="trainer-card__content">
+                  <h3 class="trainer-card__name">Андрей Косенков</h3>
+                  <p class="trainer-card__position">Тренер по боксу</p>
+
+                  <div class="trainer-card__stats">
+                    <div class="trainer-stat">
+                      <span class="stat-number">180+</span>
+                      <span class="stat-label">учеников</span>
+                    </div>
+                    <div class="trainer-stat">
+                      <span class="stat-number">20+</span>
+                      <span class="stat-label">побед</span>
+                    </div>
+                    <div class="trainer-stat">
+                      <span class="stat-number">10+</span>
+                      <span class="stat-label">лет</span>
+                    </div>
+                  </div>
+
+                  <div class="trainer-card__achievements">
+                    <h4>Достижения:</h4>
+                    <ul>
+                      <li>Кандидат в мастера спорта</li>
+                      <li>Победитель региональных турниров</li>
+                      <li>Специалист по работе с подростками</li>
+                    </ul>
+                  </div>
+
+                  <div class="trainer-card__philosophy">
+                    <p>"Бокс учит дисциплине и уважению к сопернику"</p>
+                  </div>
+
+                  <button
+                    class="button is-outlined trainer-modal-btn"
+                    data-trainer="3"
+                  >
+                    Подробнее о тренере
+                  </button>
                 </div>
               </div>
             </div>
           </div>
+
+          <!-- Навигация -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </section>
@@ -1080,7 +1186,9 @@
                   "
                 ></div>
                 <div>
-                  <p class="title is-5" style="color: var(--primary-white);">Кравченко Олеся</p>
+                  <p class="title is-5" style="color: var(--primary-white)">
+                    Кравченко Олеся
+                  </p>
                   <p class="subtitle is-6">2 сентября</p>
                 </div>
               </div>
@@ -1172,15 +1280,19 @@
           >
             <div class="review-card">
               <div class="review-header">
-                <div class="review-avatar" style="
-                  background-image: url('https://avatars.mds.yandex.net/get-yapic/24700/FkT2WiCFpHR8dfXdRP3O5WoNvs-1/orig');
-                  background-size: contain;
-                  background-repeat: no-repeat;
-                  background-position: center;
-                ">
-                </div>
+                <div
+                  class="review-avatar"
+                  style="
+                    background-image: url('https://avatars.mds.yandex.net/get-yapic/24700/FkT2WiCFpHR8dfXdRP3O5WoNvs-1/orig');
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  "
+                ></div>
                 <div>
-                  <p class="title is-5" style="color: var(--primary-white);">Евгения Чепрасова</p>
+                  <p class="title is-5" style="color: var(--primary-white)">
+                    Евгения Чепрасова
+                  </p>
                   <p class="subtitle is-6">3 сентября</p>
                 </div>
               </div>
