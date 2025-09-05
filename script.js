@@ -148,4 +148,75 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+  // Функция для модальных окон тренеров
+  function initTrainerModals() {
+    // Кнопки открытия
+    const modalButtons = document.querySelectorAll(".trainer-modal-btn");
+
+    // Кнопки закрытия
+    const closeButtons = document.querySelectorAll(
+      ".modal .delete, .modal .button:not(.is-danger)"
+    );
+
+    // Фон модального окна
+    const modalBackgrounds = document.querySelectorAll(".modal-background");
+
+    // Открытие модального окна
+    modalButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const trainerId = button.getAttribute("data-trainer");
+        const modal = document.getElementById(`trainer-modal-${trainerId}`);
+
+        if (modal) {
+          modal.classList.add("is-active");
+          document.body.style.overflow = "hidden"; // Блокируем скролл
+        }
+      });
+    });
+
+    // Закрытие модального окна
+    function closeAllModals() {
+      document.querySelectorAll(".modal").forEach((modal) => {
+        modal.classList.remove("is-active");
+      });
+      document.body.style.overflow = ""; // Восстанавливаем скролл
+    }
+
+    // Обработчики закрытия
+    closeButtons.forEach((button) => {
+      button.addEventListener("click", closeAllModals);
+    });
+
+    modalBackgrounds.forEach((background) => {
+      background.addEventListener("click", closeAllModals);
+    });
+
+    // Закрытие по ESC
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeAllModals();
+      }
+    });
+
+    // Кнопки "Записаться к тренеру"
+    const signupButtons = document.querySelectorAll(
+      ".modal-card-foot .is-danger"
+    );
+    signupButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        closeAllModals();
+        // Плавная прокрутка к форме записи
+        const formSection = document.getElementById("contacts");
+        if (formSection) {
+          window.scrollTo({
+            top: formSection.offsetTop - 70,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  }
+
+  initTrainerModals();
 });
