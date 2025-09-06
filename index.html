@@ -556,7 +556,7 @@
       </div>
     </section>
 
-    <!-- Секция цен -->
+    <!-- Секция цен с табами -->
     <section id="pricing" class="section pricing">
       <div class="container">
         <h2 class="section-title" data-aos="fade-up">СТОИМОСТЬ ТРЕНИРОВОК</h2>
@@ -568,257 +568,514 @@
           Выберите подходящий формат занятий и начните свой путь в мире бокса
         </p>
 
-        <div class="columns is-centered is-variable is-5">
-          <!-- Карточка 1: Разовое занятие -->
-          <div
-            class="column is-one-third"
-            data-aos="fade-up"
-            data-aos-delay="200"
-          >
-            <div class="pricing-card">
-              <div class="pricing-card__header">
-                <h3 class="title is-3">Разовое занятие</h3>
-                <div class="pricing-card__price">
-                  <span class="pricing-card__amount">1 500 ₽</span>
-                  <span class="pricing-card__duration">/ занятие</span>
+        <!-- Табы -->
+        <div
+          class="tabs is-centered is-boxed mb-6"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <ul id="pricing-tabs">
+            <li class="is-active" data-tab="adults">
+              <a>Взрослые</a>
+            </li>
+            <li data-tab="children">
+              <a>Дети</a>
+            </li>
+            <li data-tab="individual">
+              <a>Индивидуально</a>
+            </li>
+            <li data-tab="family">
+              <a>Семейный абонемент</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Контент табов с SEO fallback -->
+        <div id="pricing-content" class="tab-content" style="display: none">
+          <!-- Взрослые -->
+          <div class="tab-pane is-active" id="adults-tab">
+            <div class="columns is-centered is-variable is-5">
+              <!-- Карточка 1: Разовое занятие -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Разовое занятие</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">1 500 ₽</span>
+                      <span class="pricing-card__duration">/ занятие</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Пробное занятие</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>120 минут тренировки</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Все необходимое оборудование</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-outlined is-fullwidth" href="#contacts">
+                      Записаться
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div class="pricing-card__features">
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Пробное занятие</span>
-                </div>
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>120 минут тренировки</span>
-                </div>
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Все необходимое оборудование</span>
+              <!-- Карточка 2: Месячный абонемент -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__badge">ВЫГОДНО</div>
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Месячный абонемент</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">8 000 ₽</span>
+                      <span class="pricing-card__duration">/ месяц</span>
+                    </div>
+                    <p class="pricing-card__savings">Экономия 2 000 ₽</p>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>8 занятий в месяц</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Персональная программа</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Прогресс-отслеживание</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Скидка на экипировку 10%</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-danger is-fullwidth" href="#contacts">
+                      Выбрать тариф
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div class="pricing-card__action">
-                <a class="button is-outlined is-fullwidth" href="#contacts">
-                  Записаться
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Карточка 2: Месячный абонемент (Популярный) -->
-          <div
-            class="column is-one-third"
-            data-aos="fade-up"
-            data-aos-delay="300"
-          >
-            <div class="pricing-card pricing-card--popular">
-              <div class="pricing-card__badge">ВЫГОДНО</div>
-              <div class="pricing-card__header">
-                <h3 class="title is-3">Месячный абонемент</h3>
-                <div class="pricing-card__price">
-                  <span class="pricing-card__amount">8 000 ₽</span>
-                  <span class="pricing-card__duration">/ месяц</span>
+              <!-- Карточка 3: Годовой абонемент -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Годовой абонемент</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">75 000 ₽</span>
+                      <span class="pricing-card__duration">/ год</span>
+                    </div>
+                    <p class="pricing-card__savings">Экономия 21 000 ₽</p>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>96 занятий в год</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Персональный шкафчик</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Скидка 15% на экипировку</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Бесплатная фитнес-диагностика</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-outlined is-fullwidth" href="#contacts">
+                      Выбрать тариф
+                    </a>
+                  </div>
                 </div>
-                <p class="pricing-card__savings">Экономия 2 000 ₽</p>
-              </div>
-
-              <div class="pricing-card__features">
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>8 занятий в месяц</span>
-                </div>
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Персональная программа</span>
-                </div>
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Прогресс-отслеживание</span>
-                </div>
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Скидка на экипировку 10%</span>
-                </div>
-              </div>
-
-              <div class="pricing-card__action">
-                <a class="button is-danger is-fullwidth" href="#contacts">
-                  Выбрать тариф
-                </a>
               </div>
             </div>
           </div>
 
-          <!-- Карточка 3: Индивидуальные тренировки -->
-          <div
-            class="column is-one-third"
-            data-aos="fade-up"
-            data-aos-delay="400"
-          >
-            <div class="pricing-card">
-              <div class="pricing-card__header">
-                <h3 class="title is-3">Индивидуально</h3>
-                <div class="pricing-card__price">
-                  <span class="pricing-card__amount">2 500 ₽</span>
-                  <span class="pricing-card__duration">/ занятие</span>
+          <!-- Дети -->
+          <div class="tab-pane" id="children-tab">
+            <div class="columns is-centered is-variable is-5">
+              <!-- Карточка 1: Разовое занятие -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Разовое занятие</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">1 200 ₽</span>
+                      <span class="pricing-card__duration">/ занятие</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Пробное занятие</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>90 минут тренировки</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Все необходимое оборудование</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Инструктаж по безопасности</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-outlined is-fullwidth" href="#contacts">
+                      Записаться
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div class="pricing-card__features">
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Персональный тренер</span>
-                </div>
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Гибкое расписание</span>
-                </div>
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Индивидуальная программа</span>
-                </div>
-                <div class="pricing-card__feature">
-                  <span class="icon has-text-success">
-                    <svg
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                    >
-                      <path d="M20 6L9 17l-5-5" />
-                    </svg>
-                  </span>
-                  <span>Максимальный результат</span>
+              <!-- Карточка 2: Месячный абонемент -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__badge">ВЫГОДНО</div>
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Месячный абонемент</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">6 000 ₽</span>
+                      <span class="pricing-card__duration">/ месяц</span>
+                    </div>
+                    <p class="pricing-card__savings">Экономия 1 800 ₽</p>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>8 занятий в месяц</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Персональная программа</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Прогресс-отслеживание</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Сертификат об участии</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-danger is-fullwidth" href="#contacts">
+                      Выбрать тариф
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div class="pricing-card__action">
-                <a class="button is-outlined is-fullwidth" href="#contacts">
-                  Обсудить детали
-                </a>
+              <!-- Карточка 3: Годовой абонемент -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Годовой абонемент</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">60 000 ₽</span>
+                      <span class="pricing-card__duration">/ год</span>
+                    </div>
+                    <p class="pricing-card__savings">Экономия 16 800 ₽</p>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>96 занятий в год</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Персональный шкафчик</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Фирменная форма</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Участие в турнирах</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-outlined is-fullwidth" href="#contacts">
+                      Выбрать тариф
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Индивидуально -->
+          <div class="tab-pane" id="individual-tab">
+            <div class="columns is-centered is-variable is-5">
+              <!-- Карточка 1: Индивидуальное занятие -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Индивидуальное занятие</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">2 500 ₽</span>
+                      <span class="pricing-card__duration">/ занятие</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Персональный тренер</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>120 минут тренировки</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Индивидуальная программа</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Гибкое расписание</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-outlined is-fullwidth" href="#contacts">
+                      Записаться
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Карточка 2: Пакет 10 занятий -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__badge">ВЫГОДНО</div>
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Пакет 10 занятий</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">20 000 ₽</span>
+                      <span class="pricing-card__duration">/ пакет</span>
+                    </div>
+                    <p class="pricing-card__savings">Экономия 5 000 ₽</p>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>10 индивидуальных занятий</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Персональная программа</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Видеоанализ техники</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Nutrition консультация</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-danger is-fullwidth" href="#contacts">
+                      Выбрать тариф
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Карточка 3: Персональный коучинг -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Персональный коучинг</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">45 000 ₽</span>
+                      <span class="pricing-card__duration">/ месяц</span>
+                    </div>
+                    <p class="pricing-card__savings">Экономия 15 000 ₽</p>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Неограниченные занятия</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Персональный план развития</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Ежедневная поддержка</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Full сопровождение</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-outlined is-fullwidth" href="#contacts">
+                      Выбрать тариф
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Семейный абонемент -->
+          <div class="tab-pane" id="family-tab">
+            <div class="columns is-centered is-variable is-5">
+              <!-- Карточка 1: Семейное разовое -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Семейное разовое</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">2 500 ₽</span>
+                      <span class="pricing-card__duration">/ занятие</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>2 члена семьи</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>120 минут тренировки</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Совместные занятия</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Семейная скидка</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-outlined is-fullwidth" href="#contacts">
+                      Записаться
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Карточка 2: Семейный месячный -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__badge">ВЫГОДНО</div>
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Семейный месячный</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">12 000 ₽</span>
+                      <span class="pricing-card__duration">/ месяц</span>
+                    </div>
+                    <p class="pricing-card__savings">Экономия 3 600 ₽</p>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>2 члена семьи - 8 занятий</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Совместные тренировки</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Семейные турниры</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Фотосессия</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-danger is-fullwidth" href="#contacts">
+                      Выбрать тариф
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Карточка 3: Семейный годовой -->
+              <div class="column is-one-third">
+                <div class="pricing-card">
+                  <div class="pricing-card__header">
+                    <h3 class="title is-3">Семейный годовой</h3>
+                    <div class="pricing-card__price">
+                      <span class="pricing-card__amount">120 000 ₽</span>
+                      <span class="pricing-card__duration">/ год</span>
+                    </div>
+                    <p class="pricing-card__savings">Экономия 36 000 ₽</p>
+                  </div>
+                  <div class="pricing-card__features">
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>2 члена семьи - 96 занятий</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Персональные шкафчики</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Эксклюзивные мероприятия</span>
+                    </div>
+                    <div class="pricing-card__feature">
+                      <span class="icon has-text-success">✓</span>
+                      <span>Семейный абонемент</span>
+                    </div>
+                  </div>
+                  <div class="pricing-card__action">
+                    <a class="button is-outlined is-fullwidth" href="#contacts">
+                      Выбрать тариф
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
+        <noscript>
+          <style>
+            #pricing-content {
+              display: block !important;
+            }
+            .tab-pane {
+              display: none !important;
+            }
+            .tab-pane.is-active {
+              display: block !important;
+            }
+          </style>
+          <div class="has-text-centered mt-4">
+            <p class="is-size-6">
+              Для переключения между тарифами включите JavaScript
+            </p>
+          </div>
+        </noscript>
+
         <div
           class="has-text-centered mt-6"
           data-aos="fade-up"
-          data-aos-delay="500"
+          data-aos-delay="600"
         >
           <p class="is-size-5">
             💪 Первая пробная тренировка — <strong>бесплатно!</strong>
@@ -1844,5 +2101,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+    <script src="pricing.js"></script>
   </body>
 </html>

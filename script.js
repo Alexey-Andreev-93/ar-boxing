@@ -217,6 +217,35 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   }
+  // Функция для инициализации табов
+  function initTabs() {
+    const tabLinks = document.querySelectorAll(".tabs li");
+    const tabPanes = document.querySelectorAll(".tab-pane");
+
+    tabLinks.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        // Убираем активный класс со всех табов
+        tabLinks.forEach((tab) => tab.classList.remove("is-active"));
+        tabPanes.forEach((pane) => pane.classList.remove("is-active"));
+
+        // Добавляем активный класс к текущему табу
+        link.classList.add("is-active");
+
+        // Показываем соответствующее содержимое
+        const tabId = link.getAttribute("data-tab");
+        document.getElementById(`${tabId}-tab`).classList.add("is-active");
+      });
+    });
+  }
+
+  // Инициализация табов цен
+  if (typeof initPricingTabs === "function") {
+    initPricingTabs();
+  }
+
+  initTabs();
 
   initTrainerModals();
 });

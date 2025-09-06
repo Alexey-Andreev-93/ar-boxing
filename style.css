@@ -183,11 +183,11 @@ h6 {
   border-radius: 10px;
   min-height: 300px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease; /* Добавляем анимацию */
+  transition: transform 0.3s ease; 
 }
 
 .about-image:hover {
-  transform: scale(1.02); /* Легкое увеличение при наведении */
+  transform: scale(1.02);
 }
 
 /* Стили для секции тренеров */
@@ -198,7 +198,7 @@ h6 {
 
 .trainer-card {
   background: var(--primary-white);
-  border-radius: 20px 20px 0 0 ;
+  border-radius: 20px 20px 0 0;
   overflow: hidden;
   transition: var(--transition);
   height: 100%;
@@ -207,7 +207,7 @@ h6 {
 }
 
 .trainer-card:hover {
-  transform: translateY(-10px);
+  transform: (-10px);
   box-shadow: 0 20px 45px rgba(226, 10, 10, 0.15);
 }
 
@@ -223,10 +223,6 @@ h6 {
   background-size: cover;
   background-position: center;
   transition: transform 0.3s ease;
-}
-
-.trainer-card:hover .trainer-image {
-  transform: scale(1.05);
 }
 
 .trainer-card__badge {
@@ -382,39 +378,10 @@ h6 {
   font-weight: 800;
 }
 
-
-/* Стили для секции достижений */
-.achievements-tabs {
-  margin: 2rem 0;
-}
-
-.achievement-list {
-  margin-top: 1rem;
-}
-
-.achievement-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  background: var(--light-gray);
-  border-radius: 8px;
-}
-
-.achievement-year {
-  font-weight: 700;
-  color: var(--primary-red);
-  min-width: 100px;
-}
-
-.achievement-text {
-  flex: 1;
-}
-
 .tab-pane {
   display: none;
   padding: 1.5rem;
-  background: var(--light-gray);
+  background: var(--primary-white);
   border-radius: 0 0 8px 8px;
 }
 
@@ -423,38 +390,8 @@ h6 {
   animation: fadeIn 0.5s ease;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.trainer-stats {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid #eee;
-}
-
-.stat-item {
-  text-align: center;
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: var(--primary-red);
-  line-height: 1;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: var(--dark-gray);
-}
+.tab-pane { display: none !important; }
+.tab-pane.is-active { display: block !important; }
 
 /* Стили для секции преимуществ */
 .advantages {
@@ -611,6 +548,64 @@ h6 {
   background: var(--primary-red);
   color: var(--primary-white);
   transform: translateY(-2px);
+}
+
+/* Стили для табов */
+
+#famaly-tab {
+  background-color: var(--primary-white);
+}
+.tabs.is-boxed ul {
+  border-bottom: none;
+  margin-bottom: 3rem;
+}
+
+.tabs.is-boxed li a {
+  border: 2px solid var(--primary-red);
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+  color: var(--primary-red);
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.tabs.is-boxed li.is-active a {
+  background-color: var(--primary-red);
+  color: var(--primary-white);
+  border-color: var(--primary-red);
+}
+
+.tabs.is-boxed li a:hover {
+  background-color: rgba(226, 10, 10, 0.1);
+  border-color: var(--primary-red);
+}
+
+.tabs.is-boxed li.is-active a:hover {
+  background-color: var(--primary-red);
+}
+
+.tab-content {
+  margin-top: 2rem;
+}
+
+.tab-pane {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.tab-pane.is-active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Стили для галереи */
@@ -942,18 +937,18 @@ blockquote {
     width: 30%;
   }
 
-    .trainer-card__image {
+  .trainer-card__image {
     height: 250px;
   }
-  
+
   .trainer-card__content {
     padding: 1.5rem;
   }
-  
+
   .trainer-card__stats {
     padding: 1rem 0;
   }
-  
+
   .stat-number {
     font-size: 1.5rem;
   }
@@ -1010,6 +1005,33 @@ blockquote {
 
   .about .column.is-half:first-child {
     order: 2;
+    @media screen and (max-width: 768px) {
+      .tabs.is-boxed ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .tabs.is-boxed li {
+        margin-bottom: 0.5rem;
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .tabs.is-boxed li a {
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .pricing-card {
+        margin-bottom: 2rem;
+      }
+
+      .columns.is-variable.is-5 {
+        margin: 0;
+      }
+    }
   }
 
   .about .column.is-half:last-child {
@@ -1020,15 +1042,15 @@ blockquote {
   .trainer .swiper-button-prev {
     display: none;
   }
-  
+
   .trainer-swiper {
     padding-bottom: 40px;
   }
-  
+
   .trainer-card__image {
     height: 220px;
   }
-  
+
   .trainer-card__name {
     font-size: 1.3rem;
   }
@@ -1057,6 +1079,21 @@ blockquote {
     padding: 0.4rem 1rem;
     font-size: 0.8rem;
   }
+  .tabs.is-boxed ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tabs.is-boxed li {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .tabs.is-boxed li a {
+    text-align: center;
+    width: 100%;
+  }
 
   .gallery-slider {
     height: 400px;
@@ -1071,30 +1108,30 @@ blockquote {
     width: 100%;
   }
 
-    .modal-card {
+  .modal-card {
     width: 95%;
     margin: 0 auto;
   }
-  
+
   .modal-card-body .columns {
     flex-direction: column;
   }
-  
+
   .trainer-modal__image {
     height: 250px;
   }
-  
+
   .trainer-modal__stats {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .modal-stat {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .modal-stat__number {
     font-size: 1.8rem;
   }
@@ -1116,24 +1153,32 @@ blockquote {
   .section {
     padding: 4rem 1rem;
   }
-    .trainer-card__stats {
+  .trainer-card__stats {
     flex-direction: column;
     gap: 1rem;
   }
-  
+
   .trainer-stat {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   .stat-number {
     font-size: 1.5rem;
   }
-  
+
   .stat-label {
     font-size: 0.9rem;
     margin-top: 0;
+  }
+
+  .pricing-card {
+    margin-bottom: 2rem;
+  }
+
+  .columns.is-variable.is-5 {
+    margin: 0;
   }
 
   .gallery-slider {
@@ -1148,19 +1193,19 @@ blockquote {
     padding: 1.5rem;
   }
 
-    .modal-card-body {
+  .modal-card-body {
     padding: 1.5rem;
   }
-  
+
   .trainer-modal__image {
     height: 200px;
   }
-  
+
   .modal-card-head,
   .modal-card-foot {
     padding: 1rem;
   }
-  
+
   .modal-card-title {
     font-size: 1.3rem;
   }
